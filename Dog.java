@@ -1,9 +1,49 @@
 public class Dog {
-    // Intentionally empty for now: no fields, no constructors, no methods.
-}
-// A1: Create a Dog with no constructors defined.
-Dog dog1 = new Dog();
+    private String name;
+    private int age; 
+    private String breed;
 
-// A2: Print the object directly.
-System.out.println("Printing dog1 directly:");
-System.out.println(dog1); 
+    public Dog() { //Regular Constuctor           
+        name = "Unknown";
+        age = 0;
+        breed = "Mixed";
+    }
+
+    public Dog(String name, int age, String breed) { // parameterized constructor
+        this.name = name;
+        this.age = age;
+        this.breed = breed; 
+    }
+
+    public String getName() { 
+        return name; 
+    }
+    
+    public void setName(String name) { 
+        this.name = name; 
+    }
+
+    public int getAge() { 
+        return age; 
+    }
+    
+    public void setAge(int age) { 
+    if (age >= 0) {
+        this.age = age; 
+    }
+}
+
+    public String getBreed() { 
+        return breed; 
+    }
+
+    public void setBreed(String breed) { 
+        this.breed = breed;
+    }
+
+    @Override
+        public String toString() {
+        return "Dog{name = '" + name + "', age = " + age + ", breed ='" + breed + "'}";
+    
+    } 
+}
